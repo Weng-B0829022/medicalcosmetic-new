@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+
+  @font-face {
+    font-family: 'Noto Sans TC';
+    src: url('/fonts/NotoSansTC-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-display: swap; 
+  }
+
+  @font-face {
+    font-family: 'Noto Sans TC';
+    src: url('/fonts/NotoSansTC-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Noto Sans TC';
+    src: url('/fonts/NotoSansTC-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Noto Sans TC';
+    src: url('/fonts/NotoSansTC-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Noto Sans TC';
+    src: url('/fonts/NotoSansTC-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Noto Sans TC';
+    src: url('/fonts/NotoSansTC-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Noto Sans TC';
+    src: url('/fonts/NotoSansTC-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Noto Sans TC';
+    src: url('/fonts/NotoSansTC-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-display: swap;
+  }
+  
+  /* 基礎按鈕樣式 */
+  .btn-base {
+    @apply font-work-sans font-medium border-[3px] transition-all duration-300 flex items-center justify-center gap-2;
+  }
+
+  /* 主要按鈕樣式 */
+  .btn-main {
+    @apply btn-base bg-primary text-white border-primary
+            hover:bg-btn-primary-hover hover:border-btn-primary-hover
+            active:bg-btn-primary-active active:border-btn-primary-active
+            disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  /* 次要按鈕樣式 */
+  .btn-secondary {
+    @apply btn-base bg-white text-primary border-primary
+            hover:bg-btn-secondary-hover hover:text-white hover:border-btn-secondary-hover
+            active:bg-btn-secondary-active active:border-btn-secondary-active
+            disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  /* 大型按鈕 */
+  .btn-lg {
+    @apply h-12 px-6 rounded-lg text-base;
+  }
+
+  /* 中型按鈕 */
+  .btn-md {
+    @apply h-10 px-4 rounded-md text-sm;
+  }
+
+  /* 小型按鈕 */
+  .btn-sm {
+    @apply h-8 px-3 rounded-md text-xs;
+  }
+
+  /* 加載中狀態 */
+  .btn-progress {
+    @apply relative overflow-hidden;
+  }
+
+  .btn-progress::after {
+    @apply content-[''] absolute left-0 top-0 w-full h-full bg-black/10;
+  }
+
+  /* 進度指示器 */
+  .btn-spinner {
+    @apply animate-spin h-5 w-5 border-2 border-white border-t-transparent rounded-full;
+  }
+
+}

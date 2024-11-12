@@ -1,0 +1,32 @@
+src/
+├── components/          # UI Components (可重用的基礎組件)
+│   ├── Button/
+│   ├── Input/
+│   ├── Card/
+│   └── Table/
+│
+├── pages/             # Page Components (頁面組件)
+│   ├── Dashboard/
+│   ├── UserManagement/
+│   └── ProductCatalog/
+│
+├── hooks/             # 自定義 Hooks
+├── utils/             # 工具函數
+├── stores/            # 變數儲存
+│	├── customers/
+│	└── clinics/
+├── services/          # API 服務
+│	└── api/
+├── plugin/            # 額外模組(可加可不加)
+├── types/             # TypeScript 類型定義
+└── App.tsx            # 根組件
+
+
+套件: 
+
+狀態管理: 			zustand
+Forms Validation: 	React Hook Form / Zod
+Data Fetching: 		swr 
+UI : 				shadcn / tailwind
+Router: 			React Router
+Others: 			useHook
