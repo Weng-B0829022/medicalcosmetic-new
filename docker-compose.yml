@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend/medical-cosmetic
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=0
+    volumes:
+      - static_volume:/app/staticfiles
+      - media_volume:/app/mediafiles
+
+volumes:
+  static_volume:
+  media_volume:
