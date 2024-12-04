@@ -113,4 +113,8 @@
     @apply animate-spin h-5 w-5 border-2 border-white border-t-transparent rounded-full;
   }
 
+  .btn-shining-star {
+    @apply bg-[linear-gradient(271.69deg,#28B1E2_0%,#7B6AC8_48.5%,#C924B2_100%)] text-white px-32 py-3 rounded-md text-lg font-semibold hover:opacity-90 transition-opacity;
+  }
+
 }

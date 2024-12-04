@@ -28,7 +28,7 @@ export default function Navbar() {
     const location = useLocation();
 
     return (
-        <header className=" border-text bg-white fixed top-0 left-0 right-0 z-50">
+        <header className=" border-text bg-white bg-opacity-0 fixed top-0 left-0 right-0 z-50">
             <div className="flex h-20 items-center w-full">
                 <div className="pl-4"> 
                     <Link to="/" className="flex items-center gap-3">
@@ -37,7 +37,7 @@ export default function Navbar() {
                             alt="Beauty Tech Logo" 
                             className="h-10 w-10 rounded-full "
                         />
-                        <span className="text-xl h-10 flex items-center font-work-sans font-bold text-primary">
+                        <span className="text-xl h-10 flex items-center font-work-sans font-bold text-white">
                             Beauty Tech
                         </span>
                     </Link>
@@ -50,7 +50,7 @@ export default function Navbar() {
                                     {item.subItems ? (
                                         <>
                                             <NavigationMenuTrigger 
-                                                className="font-work-sans h-10 text-text "
+                                                className="font-work-sans h-10 text-white "
                                             >
                                                 {item.label}
                                             </NavigationMenuTrigger>
@@ -76,7 +76,7 @@ export default function Navbar() {
                                             <Link
                                                 to={item.href}
                                                 className={`
-                                                    px-4 py-2 rounded-md transition-colors
+                                                    px-4 py-2 rounded-md transition-colors text-white
                                                     ${location.pathname === item.href 
                                                         ? ' font-bold '
                                                         : '  '
@@ -98,7 +98,7 @@ export default function Navbar() {
                             className="rounded-full "
                             aria-label="User profile"
                         >
-                            <User className="h-5 w-5 text-primary" />
+                            <User className="h-5 w-5 text-white" />
                         </Button>
                     </div>
                 </div>

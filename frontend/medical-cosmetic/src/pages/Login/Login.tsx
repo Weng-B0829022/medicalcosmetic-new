@@ -11,7 +11,6 @@ import { Loader2 } from 'lucide-react';
 // 	email: 'denni9e32@gmail.com',
 // 	password: '12eqweqwerZ$'
 // }
-
 function LoginButton({ emailRef, passwordRef, setError, setAuth }: { 
 	emailRef: React.RefObject<HTMLInputElement>, 
 	passwordRef: React.RefObject<HTMLInputElement>, 
@@ -161,7 +160,7 @@ function Login() {
                 <div 
                     className="bg-gray-200 col-span-7"
                     style={{
-                        backgroundImage: "url('/public/static/login-background.png')",
+                        backgroundImage: "url('/static/login-background.png')",
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat"
@@ -187,6 +186,7 @@ function Login() {
 									type="email"
 									placeholder="name@company.com"
 									className="w-full py-2"
+									defaultValue="denni9e32@gmail.com"
 									required
 								/>
 								</div>
@@ -202,6 +202,7 @@ function Login() {
 										type="password"
 										placeholder="••••••••"
 										className="w-full py-2"
+										defaultValue="12eqweqwerZ$"
 										required
 									/>
 								</div>

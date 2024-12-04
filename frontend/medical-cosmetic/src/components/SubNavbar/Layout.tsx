@@ -1,4 +1,3 @@
-
 export default function Layout({ 
     title, 
     component, 
@@ -10,10 +9,15 @@ export default function Layout({
 }) {
     return (
         // 移除 min-h-screen，改用 flex-1
-        <div className="flex-1 bg-primary-lighter pt-16 flex flex-col">
+        <div className="flex-1 bg-primary-lighter pt-20 flex flex-col" 
+            style={{ 
+                backgroundImage: "url('/static/home-1.jpg')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+            }}>
             <div className="flex p-6 gap-6 justify-between">
                 <div className="w-1/4 flex items-center">
-                    <h1 className="text-2xl font-bold text-text">
+                    <h1 className="text-2xl font-bold  text-white">
                         {title}
                     </h1>
                 </div>
